@@ -193,7 +193,7 @@ for_window [class="lattedock"] floating enable
 no_focus [window_type="notification"]
 
 for_window [class="^.*"] border none
-gaps inner 8
+gaps inner 12
 gaps outer 18
 gaps top 36 
 
