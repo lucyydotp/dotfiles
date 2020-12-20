@@ -1,11 +1,16 @@
 #!/bin/bash
+# ---
+# Lucy's Dotfiles
+# https://github.com/lucyy-mc/dotfiles-new
+# Rofi power menu
+# ---
 
-# get rofi input
-
-ACTION=$(echo -e "Shutdown\nReboot\nLogoff" | rofi -dmenu -p "power")
+ACTION=$(echo -e "Shutdown\nSuspend\nReboot\nLogoff" | rofi -dmenu -p "power")
 
 if [[ $ACTION == "Shutdown" ]] ;
 	then systemctl poweroff
+elif [[ $ACTION == "Suspend" ]] ;
+	then systemctl suspend
 elif [[ $ACTION == "Reboot" ]] ;
 	then systemctl reboot
 elif [[ $ACTION == "Logoff" ]] ;

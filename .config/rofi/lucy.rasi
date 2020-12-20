@@ -1,4 +1,10 @@
 // vim: syntax=css
+/* ---
+  Lucy's Dotfiles
+  https://github.com/lucyy-mc/dotfiles-new
+  Rofi theme file
+--- */
+
 * {
 	background-color: transparent;
 	color: #f7e6ff;

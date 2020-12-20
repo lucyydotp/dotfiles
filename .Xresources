@@ -1,3 +1,9 @@
+! ---
+! Lucy's Dotfiles
+! https://github.com/lucyy-mc/dotfiles-new
+! .Xresources
+! ---
+
 ! special
 *.foreground:   #f7e6ff
 *.background:   #172035
