@@ -1,0 +1,151 @@
+
+[settings]
+format-padding = 1
+format-margin = 1
+
+
+[bar/left]
+modules-left = appmenu dunst power
+font-0 = "JetBrainsMono Nerd Font:size=10;2"
+override-redirect = true
+wm-restack = i3
+offset-x = 24px
+offset-y = 10px
+enable-ipc = true
+width = 104px
+height = 28px
+background = #C0172035
+#radius = 18px
+
+[bar/right]
+background = #C0172035
+font-0 = "JetBrainsMono Nerd Font:size=10;2"
+modules-right = alsa wifi date
+override-redirect = true
+wm-restack = i3
+offset-x = 100%:-374px
+offset-y = 10px
+enable-ipc = true
+width = 350px
+height = 28px
+line-size = 2px
+
+[bar/bar]
+
+font-0 = "Hack Nerd Font:size=10;2"
+#font-2 = "Hack Nerd Font:size=16;4"
+
+override-redirect = true
+wm-restack = i3
+
+offset-x = 8px
+offset-y = 8px
+width = 100%:-16
+line-size = 2px
+
+background = #C01a1a1a
+modules-left = appmenu
+modules-right = spotify alsa wifi date battery dunst power
+tray-position = right
+enable-ipc = true
+
+
+# left modules
+
+[module/dummy]
+type=module/cpu
+format= 
+
+[module/appmenu]
+type=custom/text
+content=
+click-left=rofi -show drun -modi drun -display-drun "Applications"
+
+
+# right modules
+
+[module/spotify]
+type=custom/script
+exec=~/scripts/spotify.sh
+interval=2
+format= <label>
+format-underline = #ff8d8d
+
+
+[module/alsa]
+type=internal/pulseaudio
+
+format-volume-underline = #99b8ff
+bar-volume-width = 8
+bar-volume-empty = █
+bar-volume-empty-foreground = #545454
+
+bar-volume-fill-foreground = #ff8cec
+bar-volume-fill = █
+
+bar-volume-indicator-foreground = #ff8cec
+bar-volume-indicator = █
+
+ramp-volume-0 = 奄
+ramp-volume-1 = 奔
+ramp-volume-2 = 墳
+
+format-volume = <ramp-volume> <label-volume>
+
+format-muted-underline = #99b8ff
+label-muted = ﱝ %percentage%%
+
+use-ui-max = false
+
+[module/wifi]
+type=internal/network
+interface=wlan0
+format-connected-underline = #99b8ff
+format-disconnected-underline = #99b8ff
+
+label-connected = %local_ip%
+format-connected = 直 <label-connected>
+
+[module/date]
+type = internal/date
+label = %time% %date%
+date = %b %d%
+time = %H:%M
+format-underline = #99b8ff
+
+[module/power]
+type=custom/text
+content=襤
+click-left=~/scripts/shutdown.sh
+format-margin = 0
+
+[module/dunst]
+type = custom/ipc
+initial = 1
+format-margin = 0
+
+hook-0 = echo "%{A1:notify-send "DUNST_COMMAND_PAUSE" && polybar-msg hook dunst 2:}%{A}" &
+hook-1 = echo "%{A1:notify-send "DUNST_COMMAND_RESUME" && polybar-msg hook dunst 1:}%{A}" &
+
+[module/battery]
+type = internal/battery
+
+battery=BAT1
+adapter=ADP1
+
+ramp-capacity-0 = 
+ramp-capacity-1 = 
+ramp-capacity-2 = 
+ramp-capacity-3 = 
+ramp-capacity-4 = 
+
+format-charging = <ramp-capacity>  <label-charging>
+format-discharging = <ramp-capacity>  <label-discharging>
+
+label-full =  100%
+
+format-charging-underline = #99b8ff
+format-discharging-underline = #99b8ff
+format-full-underline = #99b8ff
+
+# vi: ft=dosini
