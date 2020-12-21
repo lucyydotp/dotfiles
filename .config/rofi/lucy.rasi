@@ -7,13 +7,13 @@
 
 * {
 	background-color: transparent;
+	accent-color: #99b8ff;
 	color: #f7e6ff;
 	font: "Jetbrains Mono 10";
-
 }
 
 element selected {
-	color: #99b8ff;
+	color: @accent-color;
 }
 
 mainbox {
@@ -40,7 +40,7 @@ element {
 }
 
 inputbar {
-	background-color: #99b8ff;
+	background-color: @accent-color;
 	color: #1a2b41;
 	border-radius: 5px;
 	padding: 5 0;
@@ -50,7 +50,7 @@ window {
 	background-color: #1a2b41D9;
 	width:300px;
 	location: north;
-	y-offset: 8px;
+	y-offset: 10px;
 	width: 1000px;
 	height: 28px;
 }

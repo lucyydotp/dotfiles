@@ -7,30 +7,34 @@ background = ${xrdb:background:#fff}
 accent_dark = ${xrdb:color4:#fff}
 accent_light = ${xrdb:color12:#fff}
 
-[bar/left]
-modules-left = appmenu dunst power
+[bar/root]
 font-0 = "JetBrainsMono Nerd Font:size=10;2"
 override-redirect = true
-wm-restack = i3
-offset-x = 24px
-offset-y = 10px
+wn-restack = i3
+offset-y=10px
+height=28px
 enable-ipc = true
+
+[bar/left]
+inherit=bar/root
+modules-left = appmenu dunst power
+offset-x = 24px
 width = 104px
-height = 28px
 background = ${cols.accent_light}
-#radius = 18px
+
+[bar/centre]
+inherit=bar/root
+background = ${cols.background}
+width = 400px
+modules-center = spotify 
+offset-x = 50%:-200px
 
 [bar/right]
+inherit=bar/root
 background = ${cols.background}
-font-0 = "JetBrainsMono Nerd Font:size=10;2"
 modules-right = alsa wifi date
-override-redirect = true
-wm-restack = i3
 offset-x = 100%:-374px
-offset-y = 10px
-enable-ipc = true
 width = 350px
-height = 28px
 line-size = 2px
 
 # left modules
@@ -40,6 +44,8 @@ type=custom/text
 content=
 click-left=rofi -show drun -modi drun -display-drun "Applications"
 content-foreground = ${cols.background}
+
+# centre modules
 
 # right modules
 
