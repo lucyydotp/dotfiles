@@ -10,7 +10,7 @@ accent_light = ${xrdb:color12:#fff}
 [bar/root]
 font-0 = "JetBrainsMono Nerd Font:size=10;2"
 override-redirect = true
-wn-restack = i3
+wm-restack = i3
 offset-y=10px
 height=28px
 enable-ipc = true
