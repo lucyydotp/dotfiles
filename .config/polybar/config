@@ -32,7 +32,7 @@ offset-x = 50%:-200px
 [bar/right]
 inherit=bar/root
 background = ${cols.background}
-modules-right = alsa wifi date
+modules-right = alsa ethernet wifi date
 offset-x = 100%:-374px
 width = 350px
 line-size = 2px
@@ -73,13 +73,20 @@ label-muted = ﱝ %percentage%%
 
 use-ui-max = false
 
-[module/wifi]
+[module/net-base]
 type=internal/network
-interface=wlan0
 format-connected-underline = ${cols.accent_light}
 format-disconnected-underline = ${cols.accent_light}
-
 label-connected = %local_ip%
+
+[module/ethernet]
+inherit=module/net-base
+interface=enp3s0
+format-connected =  <label-connected>
+
+[module/wifi]
+inherit=module/net-base
+interface=wlan0
 format-connected = 直 <label-connected>
 
 [module/date]

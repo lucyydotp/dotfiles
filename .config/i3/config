@@ -13,7 +13,7 @@ font pango:JetBrains Mono 12px
 # ---
 
 exec --no-startup-id picom --experimental-backends &
-exec --no-startup-id ~/.config/polybar/start.sh
+exec --no-startup-id ~/.config/polybar/start.sh &
 exec --no-startud-id dunst &
 exec --no-startup-id ~/scripts/wallpaper-time.sh & 
 
