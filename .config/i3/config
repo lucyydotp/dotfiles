@@ -16,6 +16,7 @@ exec --no-startup-id picom --experimental-backends &
 exec --no-startup-id ~/.config/polybar/start.sh &
 exec --no-startud-id dunst &
 exec --no-startup-id ~/scripts/wallpaper-time.sh & 
+exec --no-startup-id nm-applet
 
 # ---
 # Audio keybinds
@@ -157,6 +158,7 @@ bindsym $mod+Control+Right resize grow width 10 px or 10 ppt
 # ---
 
 for_window [window_type="notification"] floating enable, border none
+for_window [class="Lxpolkit"] sticky enable
 no_focus [window_type="notification"]
 
 # ---

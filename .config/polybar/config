@@ -28,6 +28,7 @@ background = ${cols.background}
 width = 400px
 modules-center = spotify 
 offset-x = 50%:-200px
+tray-position = left
 
 [bar/right]
 inherit=bar/root
