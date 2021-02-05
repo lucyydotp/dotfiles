@@ -6,7 +6,7 @@
 
 ! special
 *.foreground:   #f7e6ff
-*.background:   #D9172035
+*.background:   #2B2B2B
 *.cursorColor:  #f7e6ff
 
 ! black
@@ -41,7 +41,7 @@
 *.color7:       #998a99
 *.color15:      #f7e6ff
 
-URxvt.font:	xft:JetBrains Mono:size=10
+URxvt.font:	xft:Roboto Mono:size=11
 URxvt.scrollBar: 	false
 URxvt.iso14755: 	false
 URxvt.iso14755_52:	false
@@ -51,7 +51,7 @@ URxvt.keysym.Shift-Control-V: eval:paste_clipboard
 URxvt.keysym.Shift-Control-C: eval:selection_to_clipboard
 
 URxvt*depth: 32
-URxvt*background: [85]#172035
+URxvt*background: #2B2B2B
 
 URxvt.keysym.Control-Meta-c: builtin-string:
 URxvt.keysym.Control-Meta-v: builtin-string:

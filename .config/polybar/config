@@ -8,7 +8,7 @@ accent_dark = ${xrdb:color4:#fff}
 accent_light = ${xrdb:color12:#fff}
 
 [bar/root]
-font-0 = "JetBrainsMono Nerd Font:size=10;2"
+font-0 = "RobotoMono Nerd Font:size=10;2"
 override-redirect = true
 wm-restack = i3
 offset-y=10px
@@ -33,9 +33,9 @@ tray-position = left
 [bar/right]
 inherit=bar/root
 background = ${cols.background}
-modules-right = alsa ethernet wifi date
-offset-x = 100%:-374px
-width = 350px
+modules-right = alsa ethernet wifi battery date
+offset-x = 100%:-459px
+width = 435px
 line-size = 2px
 
 # left modules
@@ -116,7 +116,7 @@ format-foreground = ${cols.background}
 [module/battery]
 type = internal/battery
 
-battery=BAT1
+battery=BAT0
 adapter=ADP1
 
 ramp-capacity-0 = 
@@ -131,6 +131,6 @@ format-discharging = <ramp-capacity>  <label-discharging>
 label-full =  100%
 
 format-charging-underline = ${cols.accent_light}
-format-discharging-underline = #${cols.accent_light}
+format-discharging-underline = ${cols.accent_light}
 format-full-underline = ${cols.accent_light}
 # vi: ft=dosini

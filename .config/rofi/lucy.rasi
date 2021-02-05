@@ -9,7 +9,7 @@
 	background-color: transparent;
 	accent-color: #99b8ff;
 	color: #f7e6ff;
-	font: "Jetbrains Mono 10";
+	font: "Roboto Mono 10";
 }
 
 element selected {
@@ -47,7 +47,7 @@ inputbar {
 }
 
 window {
-	background-color: #1a2b41D9;
+	background-color: #2b2b2b;
 	width:300px;
 	location: north;
 	y-offset: 10px;
