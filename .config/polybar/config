@@ -4,8 +4,8 @@ format-margin = 1
 
 [cols] 
 background = ${xrdb:background:#fff}
-accent_dark = ${xrdb:color4:#fff}
-accent_light = ${xrdb:color12:#fff}
+accent_dark = ${xrdb:color5:#fff}
+accent_light = ${xrdb:color13:#fff}
 
 [bar/root]
 font-0 = "RobotoMono Nerd Font:size=10;2"
@@ -19,24 +19,29 @@ enable-ipc = true
 inherit=bar/root
 modules-left = appmenu dunst power
 offset-x = 24px
-width = 104px
+width = 107px
 background = ${cols.accent_light}
 
-[bar/centre]
+[bar/tray]
 inherit=bar/root
-background = ${cols.background}
-width = 400px
-modules-center = spotify 
-offset-x = 50%:-200px
-tray-position = left
+background=${cols.background}
+tray-position = center
+width = 15px
+modules-left=empty
+offset-x = 67.5%
 
 [bar/right]
 inherit=bar/root
 background = ${cols.background}
-modules-right = alsa ethernet wifi battery date
-offset-x = 100%:-459px
-width = 435px
+modules-center = workspaces
+modules-right = audio wifi battery date
+offset-x = 100%:-559px
+width = 535px
 line-size = 2px
+
+[module/empty]
+type=custom/text
+content=a
 
 # left modules
 
@@ -46,19 +51,31 @@ content=
 click-left=rofi -show drun -modi drun -display-drun "Applications"
 content-foreground = ${cols.background}
 
+[module/ram]
+type=internal/memory
+interval=3
+label = ﬙ %percentage_used%%
+label-foreground = ${cols.background}
+
+[module/cpu]
+type=internal/cpu
+interval=1
+label = ﬙ %percentage%%
+label-foreground = ${cols.background}
+
+[module/workspaces]
+type=internal/i3
+pin-workspaces = true
+strip-wsnumbers = true
+index-sort = true
+#label-focused-foreground = ${cols.background}
+label-focused-foreground = ${cols.accent_light}
+format-label-margin = 0
 # centre modules
 
 # right modules
 
-[module/spotify]
-type=custom/script
-exec=~/scripts/spotify.sh
-interval=2
-format= <label>
-format-underline = #ff8d8d
-
-
-[module/alsa]
+[module/audio]
 type=internal/pulseaudio
 
 format-volume-underline = ${cols.accent_light}
@@ -79,11 +96,6 @@ type=internal/network
 format-connected-underline = ${cols.accent_light}
 format-disconnected-underline = ${cols.accent_light}
 label-connected = %local_ip%
-
-[module/ethernet]
-inherit=module/net-base
-interface=enp3s0
-format-connected =  <label-connected>
 
 [module/wifi]
 inherit=module/net-base

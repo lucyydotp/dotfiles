@@ -15,7 +15,7 @@ font pango:JetBrains Mono 12px
 exec --no-startup-id picom &
 exec --no-startup-id ~/.config/polybar/start.sh &
 exec --no-startud-id dunst &
-exec --no-startup-id ~/scripts/wallpaper-time.sh & 
+exec --no-startup-id feh --bg-fill ~/wallpaper.png & 
 exec --no-startup-id nm-applet
 
 # ---
@@ -170,10 +170,10 @@ gaps inner 12
 gaps outer 18
 gaps top 36 
 
-set_from_resource $col12 color12 #000000
+set_from_resource $col13 color13 #000000
 
 # class        border		background 	text 	indicator 	child-border
-client.focused $col12 $col12 #222222 #2e9ef4 	#e6b3ff
-client.unfocused #222222 #222222 #888888 #292d2e   #222222
+client.focused $col13 $col13 #2b2b2b #2e9ef4 	#e6b3ff
+client.unfocused #2b2b2b #2b2b2b #888888 #292d2e   #2b2b2b
 
 title_align center
