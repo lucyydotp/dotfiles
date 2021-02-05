@@ -6,7 +6,7 @@
 
 #windows key
 set $mod Mod4
-font pango:JetBrains Mono 12px
+font pango:Roboto Mono 12px
 
 # ---
 # Start important stuff
@@ -95,8 +95,7 @@ bindsym $mod+a focus parent
 bindsym Print exec flameshot gui &
 
 # ---
-# Workspace keybinds (i have a multihead setup so dont really use these,
-# they're just the defaults)
+# Workspace keybinds, they're just the defaults
 # ---
 
 set $ws1 "1"
@@ -133,6 +132,10 @@ bindsym $mod+Shift+7 move container to workspace number $ws7
 bindsym $mod+Shift+8 move container to workspace number $ws8
 bindsym $mod+Shift+9 move container to workspace number $ws9
 bindsym $mod+Shift+0 move container to workspace number $ws10
+
+# ---
+# Utility keybinds
+# ---
 
 bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
