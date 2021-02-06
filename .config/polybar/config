@@ -137,10 +137,10 @@ ramp-capacity-2 = 
 ramp-capacity-3 = 
 ramp-capacity-4 = 
 
-format-charging = <ramp-capacity>  <label-charging>
 format-discharging = <ramp-capacity>  <label-discharging>
 
 label-full =  100%
+label-charging = ﮣ %percentage%%
 
 format-charging-underline = ${cols.accent_light}
 format-discharging-underline = ${cols.accent_light}
