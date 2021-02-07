@@ -41,7 +41,7 @@
 *.color7:       #998a99
 *.color15:      #f7e6ff
 
-URxvt.font:	xft:Roboto Mono:size=11
+URxvt.font:	xft:Roboto Mono:size=11,xft:Noto Sans Mono CJK JP:size=11
 URxvt.scrollBar: 	false
 URxvt.iso14755: 	false
 URxvt.iso14755_52:	false

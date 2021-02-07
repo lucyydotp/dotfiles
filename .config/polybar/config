@@ -9,6 +9,7 @@ accent_light = ${xrdb:color13:#fff}
 
 [bar/root]
 font-0 = "RobotoMono Nerd Font:size=10;2"
+font-1 = "Noto Sans Mono CJK JP:size=10;2"
 override-redirect = true
 wm-restack = i3
 offset-y=10px
@@ -33,8 +34,9 @@ offset-x = 67.5%
 [bar/right]
 inherit=bar/root
 background = ${cols.background}
-modules-center = workspaces
-modules-right = audio wifi battery date
+ 
+modules-left = workspaces
+modules-right = fcitx audio backlight battery date
 offset-x = 100%:-559px
 width = 535px
 line-size = 2px
@@ -70,7 +72,7 @@ type=internal/i3
 #index-sort = true
 #label-focused-foreground = ${cols.background}
 label-focused-foreground = ${cols.accent_light}
-format-margin = 0
+format-margin = 1
 format-padding = 0
 # centre modules
 
@@ -102,6 +104,12 @@ label-connected = %local_ip%
 inherit=module/net-base
 interface=wlan0
 format-connected = 直 <label-connected>
+
+[module/backlight]
+type=internal/backlight
+card=intel_backlight
+label=  %percentage%%
+format-underline = ${cols.accent_light}
 
 [module/date]
 type = internal/date
@@ -146,4 +154,12 @@ label-charging = ﮣ %percentage%%
 format-charging-underline = ${cols.accent_light}
 format-discharging-underline = ${cols.accent_light}
 format-full-underline = ${cols.accent_light}
+
+[module/fcitx]
+type = custom/script
+exec = polybar-fcitx-watch
+tail = true
+interval = 0
+format-underline = ${cols.accent_light}
+
 # vi: ft=dosini
