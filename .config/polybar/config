@@ -65,12 +65,13 @@ label-foreground = ${cols.background}
 
 [module/workspaces]
 type=internal/i3
-pin-workspaces = true
-strip-wsnumbers = true
-index-sort = true
+#pin-workspaces = true
+#strip-wsnumbers = true
+#index-sort = true
 #label-focused-foreground = ${cols.background}
 label-focused-foreground = ${cols.accent_light}
-format-label-margin = 0
+format-margin = 0
+format-padding = 0
 # centre modules
 
 # right modules
