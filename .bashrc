@@ -8,6 +8,7 @@
 [[ $- != *i* ]] && return
 
 alias ls='ls --color=auto'
+alias wine32="WINEPREFIX=$HOME/.wine32 WINEARCH=win32 wine"
 
 # this lil thingy makes my mc server admin life _so_ much easier
 mcdig () {
@@ -15,4 +16,4 @@ mcdig () {
 }
 
 #ps1
-export PS1="\[\033[38;5;11m\]\u\[$(tput sgr0)\]@\[$(tput sgr0)\]\[\033[38;5;14m\]\h\[$(tput sgr0)\] \[$(tput sgr0)\]\[\033[38;5;12m\]\w\[$(tput sgr0)\] \[$(tput sgr0)\]\[\033[38;5;13m\]\\$\[$(tput sgr0)\] \[$(tput sgr0)\]"
+export PS1="\[$(tput bold)\]\[\033[38;5;10m\]\u\[$(tput sgr0)\]@\[$(tput sgr0)\]\[$(tput bold)\]\[\033[38;5;12m\]\H\[$(tput sgr0)\] \[$(tput sgr0)\]\[$(tput bold)\]\[\033[38;5;13m\]\w\[$(tput sgr0)\] \\$ \[$(tput sgr0)\]"
