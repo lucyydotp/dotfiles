@@ -8,7 +8,6 @@
 [[ $- != *i* ]] && return
 
 alias ls='ls --color=auto'
-alias wine32="WINEPREFIX=$HOME/.wine32 WINEARCH=win32 wine"
 
 # this lil thingy makes my mc server admin life _so_ much easier
 mcdig () {
