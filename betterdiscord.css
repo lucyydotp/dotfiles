@@ -1,0 +1,59 @@
+* {
+    --channeltextarea-background: transparent !important;
+    --background-primary: #2b2b2b;
+    --background-secondary: #2e2e2e;
+    --background-tertiary: #333;
+    
+    --scrollbar-thin-thumb: #2a2a2a;
+    --scrollbar-thin-track: transparent;
+    --scrollbar-auto-thumb: #2a2a2a;
+    --scrollbar-auto-track: #232323;
+}
+
+.da-form, .da-panels {
+    background: var(--background-tertiary);
+}
+
+.da-channelTextArea {
+    margin-bottom: 0;
+    background: transparent;
+}
+
+.da-form::before {
+    background: transparent !important;
+}
+
+.da-typing {
+    top: -26px;
+}
+
+.da-panels {
+    height: 44px;
+}
+
+.da-panels > .da-container {
+    height: 100%;
+}
+
+
+.da-scrollerSpacer {
+    height: 34px;
+}
+
+.da-jumpToPresentBar {
+    left: initial;
+    right: 20px;
+}
+
+.da-jumpToPresentBar > .da-barButtonMain {
+    display: none;
+}
+
+.da-member {
+    margin-top: -4px;
+}
+.da-membersGroup {
+    padding: 16px 8px 2px 16px;
+    height: unset;
+    text-align: center;
+}
