@@ -1,6 +1,7 @@
 [settings]
 format-padding = 1
 format-margin = 1
+screenchange-reload = true
 
 [cols] 
 background = ${xrdb:background:#fff}
@@ -29,7 +30,7 @@ background=${cols.background}
 tray-position = center
 width = 15px
 modules-left=empty
-offset-x = 67.5%
+offset-x = 100%:-620px
 
 [bar/right]
 inherit=bar/root
