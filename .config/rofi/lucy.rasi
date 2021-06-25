@@ -1,0 +1,54 @@
+* {
+	background-color: transparent;
+	color: white;
+	font: "Work Sans 12";
+}
+
+element selected {
+	color: /*#ffcc99*/ #f799ff;
+}
+
+mainbox {
+	orientation: horizontal;
+}
+
+listview {
+	layout: horizontal;
+}
+
+prompt {
+	color: white;
+}
+
+entry {
+	width: 200px;
+	height: 100%;
+}
+
+listview {
+	position: center;
+}
+
+element {
+	padding: 5 5;
+
+}
+
+inputbar {
+	color: white;
+	border-radius: 5px;
+	padding: 5 0;
+}
+
+window {
+	background-color: #192133;
+	width: 100%;
+	location: north;
+	height: 30px;
+}
+
+prompt {
+	padding:0 5;
+	height: 100%;
+}
+/* vim:ft=css
