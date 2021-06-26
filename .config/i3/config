@@ -170,6 +170,23 @@ gaps inner 12
 gaps outer 18
 gaps top 36 
 
+mode "gaps" {
+	bindsym 1 gaps outer all set 0
+	bindsym 2 gaps outer all set 12
+	bindsym 3 gaps outer all set 24
+	bindsym 4 gaps outer all set 36
+	bindsym 5 gaps outer all set 48
+	bindsym 6 gaps outer all set 60
+	bindsym 7 gaps outer all set 72
+	bindsym 8 gaps outer all set 84
+	bindsym 9 gaps outer all set 96
+
+	bindsym $mod+b mode "default"
+}
+
+bindsym $mod+b mode "gaps"
+
+
 set_from_resource $col12 color12 #000000
 
 # class        border		background 	text 	indicator 	child-border
