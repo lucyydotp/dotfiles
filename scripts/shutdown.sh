@@ -1,9 +1,10 @@
 #!/bin/bash
 # ---
 # Lucy's Dotfiles
-# https://github.com/lucyy-mc/dotfiles-new
-# Rofi power menu
+# https://github.com/lucyy-mc/dotfiles
 # ---
+#
+# Rofi power menu
 
 ACTION=$(echo -e "Shutdown\nSuspend\nReboot\nLogoff" | rofi -dmenu -p "power")
 
