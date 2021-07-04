@@ -5,7 +5,7 @@
 }
 
 element selected {
-	color: /*#ffcc99*/ #f799ff;
+	color: #99b8ff;
 }
 
 mainbox {
@@ -30,21 +30,24 @@ listview {
 }
 
 element {
-	padding: 5 5;
+	padding: 3 5;
 
 }
 
 inputbar {
 	color: white;
 	border-radius: 5px;
-	padding: 5 0;
+	padding: 4 0;
 }
 
 window {
-	background-color: #192133;
-	width: 100%;
+	background-color: #2b2b2bd9;
+	width: 1072px;
 	location: north;
 	height: 30px;
+	y-offset: 12px;
+	border: 2px;
+        border-color: #192133;
 }
 
 prompt {

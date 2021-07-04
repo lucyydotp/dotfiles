@@ -25,12 +25,14 @@ font pango:monospace 8
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.
 
-exec xrdb .Xresources
+exec --no-startup-id ~/.config/polybar/start.sh
+exec --no-startup-id ~/scripts/i3-polybar-hack.py
 exec .screenlayout/layout.sh
+exec xrdb .Xresources
 bindsym Print exec flameshot gui
 exec --no-startup-id lxsession &
 exec polybar main
-exec --no-startup-id picom --experimental-backends
+exec --no-startup-id picom
 exec --no-startup-id nm-applet
 exec feh --bg-fill wallpaper.jpg
 
@@ -164,6 +166,22 @@ bindsym $mod+Control+Right resize grow width 10 px or 10 ppt
 for_window [class="^.*"] border pixel 2
 for_window [class="jetbrains-idea" title="win0"] floating enable;
 gaps inner 12
+
+mode "gaps" {
+	bindsym 1 gaps outer all set 0
+	bindsym 2 gaps outer all set 12
+	bindsym 3 gaps outer all set 24
+	bindsym 4 gaps outer all set 36
+	bindsym 5 gaps outer all set 48
+	bindsym 6 gaps outer all set 60
+	bindsym 7 gaps outer all set 72
+	bindsym 8 gaps outer all set 84
+	bindsym 9 gaps outer all set 96
+
+	bindsym $mod+b mode "default"
+}
+
+bindsym $mod+b mode "gaps"
 
 client.focused          #5974B3 #454545 #FFFFFF #5974B3   #5974b3
 client.focused_inactive #2B2B2B #454545 #FFFFFF #5974B3   #192133

@@ -1,43 +1,61 @@
-[bar/main]
-background = #192133
-height = 30
+[col]
+bg = #d92b2b2b
+fg = #ffffff
+sel = #99b8ff
 
-font-0 = Work Sans:size=13;3
-#font-1 = FluentSystemIcons\-Regular:size=12;4
-font-1 = Unifont:size=12;3 
+[bar/common]
+background = ${col.bg}
+height = 26
+offset-x = 12
+offset-y = 12
+override-redirect = true
+wm-restack = i3
+
+radius = 8
+border-size = 2
+border-color = #192133
+
+font-0 = Work Sans:size=11;3
+font-1 = FluentSystemIcons\-Regular:size=12;5 
 
 module-margin = 2
 padding = 1
 
-modules-center = time
-modules-right = i3 volume
+[bar/left]
+inherit = bar/common
+width = 400px
+modules-left = i3
 
+[bar/right]
+inherit = bar/common
+width = 400px 
 tray-position = left
-tray-background = #192133
+modules-right = volume date time
+offset-x = 100%:-412px
+
+#tray-position = left
+#tray-background = ${col.bg}
 
 [module/i3]
 type = internal/i3
-label-focused-foreground = #f799ff
+label-focused-foreground = ${col.sel}
 index-sort = true
 
 [module/time]
 type = internal/date
 interval = 15
-date = %a %d %b 
 time = %H:%M
-label = %time% - %date%
+label =  %time%
+
+[module/date]
+type = internal/date
+interval = 60
+date = %a %d %b
+label =  %date%
 
 [module/volume]
 type = internal/pulseaudio
-ramp-volume-0 = ▁
-ramp-volume-1 = ▂
-ramp-volume-2 = ▃
-ramp-volume-3 = ▄
-ramp-volume-4 = ▅
-ramp-volume-5 = ▆
-ramp-volume-6 = ▇
-ramp-volume-7 = █
-label-muted = 
-format-volume = <ramp-volume> <label-volume>
+format-volume =  <label-volume>
+format-muted =  <label-volume>
 
 ; vim: ft=dosini
