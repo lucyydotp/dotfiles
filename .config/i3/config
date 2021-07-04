@@ -15,7 +15,6 @@ title_align center
 # start a load of stuff
 exec .screenlayout/layout.sh 				# sets monitor layout with xrandr
 exec --no-startup-id ~/.config/polybar/start.sh		# start polybar
-exec --no-startup-id ~/scripts/i3-polybar-hack.py	# hacky script to make gaps work with polybar on one display
 exec xrdb .Xresources					# xrdb for urxvt
 exec lxsession						# lxsession for polkit, autostart
 exec picom						# make it pretty
@@ -137,6 +136,16 @@ bindsym $mod+Control+Right resize grow width 10 px or 10 ppt
 # add a pretty border and gaps
 for_window [class="^.*"] border pixel 2
 gaps inner 12
+
+# IF YOU HAVE MULTIPLE MONITORS...
+# ENABLE THIS:
+
+#gaps top 38
+
+# AND DISABLE THIS:
+exec --no-startup-id ~/scripts/i3-polybar-hack.py
+
+
 
 # set colours
 client.focused          #5974B3 #454545 #FFFFFF #5974B3   #5974b3
