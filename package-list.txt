@@ -1,0 +1,17 @@
+dunst
+feh
+flameshot
+i3-gaps
+playerctl
+python-i3ipc
+rofi
+rxvt-unicode
+xorg-xrandr
+
+# The below packages are on the AUR
+
+picom-ibhagwan-git
+polybar-git
+pulseaudio-ctl
+ttf-fluentui-system-icons
+
