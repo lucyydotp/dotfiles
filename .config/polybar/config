@@ -51,6 +51,7 @@ offset-x = 100%:-412px
 type = internal/i3
 label-focused-foreground = ${col.sel}
 index-sort = true
+label-separator = " " 
 
 [module/time]
 type = internal/date
