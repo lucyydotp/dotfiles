@@ -25,4 +25,8 @@ def on_ws(i3, e):
 
 i3.on(i3ipc.Event.WORKSPACE_INIT, on_ws)
 
+for ws in i3.get_workspaces():
+    if ws.output == BAR_DISPLAY:
+        i3.command("gaps top current set " + str(GAP_SIZE))
+
 i3.main()
