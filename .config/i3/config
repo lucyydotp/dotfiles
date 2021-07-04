@@ -38,7 +38,7 @@ bindsym XF86AudioPrev exec playerctl previous
 floating_modifier $mod
 
 # keybinds for terminal, kill, and rofi
-bindsym $mod+Return exec rxvt-unicode
+bindsym $mod+Return exec urxvt
 bindsym $mod+Shift+q kill
 bindsym $mod+d exec rofi -show run
 
@@ -137,16 +137,6 @@ bindsym $mod+Control+Right resize grow width 10 px or 10 ppt
 for_window [class="^.*"] border pixel 2
 gaps inner 12
 
-# IF YOU HAVE MULTIPLE MONITORS...
-# ENABLE THIS:
-
-#gaps top 38
-
-# AND DISABLE THIS:
-exec --no-startup-id ~/scripts/i3-polybar-hack.py
-
-
-
 # set colours
 client.focused          #5974B3 #454545 #FFFFFF #5974B3   #5974b3
 client.focused_inactive #2B2B2B #454545 #FFFFFF #5974B3   #192133
@@ -155,3 +145,10 @@ client.unfocused        #192133 #454545 #FFFFFF #192133   #192133
 # fix for jetbrains ide splash screens
 for_window [class="jetbrains-idea" title="win0"] floating enable;
 
+# IF YOU HAVE MULTIPLE MONITORS...
+# ENABLE THIS:
+
+#gaps top 38
+
+# AND DISABLE THIS:
+exec --no-startup-id ~/scripts/i3-polybar-hack.py
