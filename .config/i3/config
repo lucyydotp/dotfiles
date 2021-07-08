@@ -148,7 +148,8 @@ for_window [class="jetbrains-idea" title="win0"] floating enable;
 # IF YOU HAVE MULTIPLE MONITORS...
 # ENABLE THIS:
 
-#gaps top 38
+exec --no-startup-id ~/scripts/i3-polybar-hack.py
 
 # AND DISABLE THIS:
-exec --no-startup-id ~/scripts/i3-polybar-hack.py
+
+#gaps top 38
