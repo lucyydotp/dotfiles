@@ -13,7 +13,7 @@
 	font: "Work Sans 12";
 }
 
-element selected {
+selected {
 	color: #99b8ff;
 }
 
